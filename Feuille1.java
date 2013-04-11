@@ -11,9 +11,28 @@ public class Feuille1 {
 
     public static void scan  (String[] args)
     {
+        String fonction = new String();
+        char reponse = ' ' ;
+
        Scanner sc = new Scanner(System.in);
-        System.out.println("veuillez choisir un mot:");
-        String str = sc.nextLine();
-        System.out.println("vous avez saisie: " +str);
+        do
+        {
+            System.out.println("veuillez choisir une fonction:");
+            fonction = sc.nextLine();
+            System.out.println("Vous avez choisie la fonction" +fonction);
+
+            do
+            {
+                System.out.println("voulez vous rechoisir une fonction ? (O/N)");
+                reponse = sc.nextLine().charAt(0);
+            }
+            while (reponse != 'O' && reponse != 'N');
+
+        }
+
+        while (reponse == 'O');
+
+        System.out.println("test");
+
     }
 }
